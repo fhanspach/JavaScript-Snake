@@ -161,7 +161,7 @@ SNAKE.Snake = SNAKE.Snake || (function () {
 
             function createSnakeElement() {
                 var tempNode = document.createElement("div");
-                tempNode.className = "snake-snakebody-block";
+                tempNode.className = "snake-snakebody-block animated pulse infinite";
                 tempNode.style.left = "-1000px";
                 tempNode.style.top = "-1000px";
                 tempNode.style.width = playingBoard.getBlockWidth() + "px";
@@ -480,12 +480,14 @@ SNAKE.Food = SNAKE.Food || (function () {
 
             var elmFood = document.createElement("div");
             elmFood.setAttribute("id", "snake-food-" + myId);
-            elmFood.className = "snake-food-block";
+            elmFood.setAttribute("id", "snake-food-" + myId);
+            elmFood.className = "snake-food-block jello infinite animated";
             elmFood.style.width = playingBoard.getBlockWidth() + "px";
             elmFood.style.height = playingBoard.getBlockHeight() + "px";
             elmFood.style.left = "-1000px";
             elmFood.style.top = "-1000px";
             playingBoard.getBoardContainer().appendChild(elmFood);
+
 
             // ----- public methods -----
 
@@ -732,7 +734,7 @@ SNAKE.Board = SNAKE.Board || (function () {
             function createTryAgainElement() {
                 var tmpElm = document.createElement("div");
                 tmpElm.id = "sbTryAgain" + myId;
-                tmpElm.className = "snake-try-again-dialog";
+                tmpElm.className = "snake-try-again-dialog animated flipInX";
 
                 var tryAgainTxt = document.createElement("div");
                 tryAgainTxt.innerHTML = "JavaScript Snake";

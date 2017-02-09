@@ -107,7 +107,6 @@ a.snake-link:hover {
     background-color: transparent;
     border: 0 solid transparent;
     position: absolute;
-
 }
 
 .snake-food-block:after {
@@ -116,6 +115,9 @@ a.snake-link:hover {
     color: #f1c40f;
     position: absolute;
     top: 0;
+    -vendor-animation-duration: 10s;
+    -vendor-animation-delay: 2s;
+    -vendor-animation-iteration-count: infinite;
 }
 
 .snake-playing-field {
@@ -137,12 +139,11 @@ a.snake-link:hover {
 }
 
 .snake-welcome-dialog {
-    padding: 8px;
+    padding: 20px;
     margin: 0;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: Verdana, arial, helvetica, sans-serif;
-    font-size: 14px;
+    background-color: #ecf0f1;
+    color: black;
+    font-size: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -152,22 +153,43 @@ a.snake-link:hover {
     margin-left: -158px;
     text-align: center;
     display: block;
+    -webkit-border-radius: 91px;
+    -moz-border-radius: 91px;
+    border-radius: 91px;
+
+
+}
+
+.snake-try-again-dialog >button:hover, .snake-welcome-dialog >button:hover  {
+    background-color: #1a7641;
+    cursor: pointer;
+}
+.snake-try-again-dialog >button, .snake-welcome-dialog >button  {
+    background-color: #27ae60;
+    color: whitesmoke;
+    border:none;
+    padding: 10px;
+    font-size: 1.5rem;
+    margin: 1rem;
 }
 
 .snake-try-again-dialog {
-    padding: 8px;
+    padding: 20px;
     margin: 0;
-    background-color: #000000;
-    color: #ffffff;
-    font-family: Verdana, arial, helvetica, sans-serif;
-    font-size: 14px;
+    background-color: #ecf0f1;
+    color: black;
+    font-size: 1rem;
     position: absolute;
     top: 50%;
     left: 50%;
     width: 300px;
-    height: 100px;
-    margin-top: -75px;
+    /*height: 150px;*/
+    margin-top: -100px;
     margin-left: -158px;
     text-align: center;
+    display: block;
+    -webkit-border-radius: 91px;
+    -moz-border-radius: 91px;
+    border-radius: 91px;
     display: none;
 }
