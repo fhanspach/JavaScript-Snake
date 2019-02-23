@@ -1,49 +1,104 @@
 <!DOCTYPE html>
 <!--<html manifest="snake.appcache">-->
 <head>
-    <!--
-
-    JavaScript Snake
-    By Patrick Gillespie
-    http://patorjk.com/games/snake
-
-    Source code is available here: https://github.com/patorjk/JavaScript-Snake
-
-    -->
-    <title>JavaScript Snake</title>
+    <title>EntwicklerHeld - Oh No!</title>
     <link rel=stylesheet id=style type=text/css href=./css/main-snake.css/>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="./css/images/favicon.png">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600,400italic,700" rel="stylesheet"
+          type="text/css">
+    <link type="text/css" rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,700|Merriweather:300,400,700|Montserrat:400,700|Lato:300,400,700|Open+Sans:300,400,600,700|Droid+Serif:400,700">
 
     <div id="mode-wrapper">
-        <button id="Easy" class="difficulty-btn">Easy</button><i class="fa fa-snowflake-o" aria-hidden="true"></i>
+        <button id="Easy" class="difficulty-btn">Easy</button>
+        <i class="fa fa-snowflake-o" aria-hidden="true"></i>
         <button id="Medium" class="difficulty-btn">Medium</button>
         <button id="Difficult" class="difficulty-btn">Difficult</button>
     </div>
-    <script>
-        if (navigator.onLine && window.location.hostname === 'patorjk.com') {
-            var _gaq = _gaq || [];
-            _gaq.push(['_setAccount', 'UA-3312460-1']);
-            _gaq.push(['_trackPageview']);
 
-            (function () {
-                var ga = document.createElement('script');
-                ga.type = 'text/javascript';
-                ga.async = true;
-                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-                var s = document.getElementsByTagName('script')[0];
-                s.parentNode.insertBefore(ga, s);
-            })();
+    <style type="text/css">
+        #mode-wrapper {
+            display: none !important;
         }
-    </script>
+
+        .btn {
+
+
+
+        }
+
+        .eh-bg-color {
+            background: linear-gradient(to bottom right, #2d8988 0%, #5ba983 100%);
+            background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #2d8988), color-stop(1, #5ba983));
+            background-image: -webkit-linear-gradient(top left, #2d8988 0%, #5ba983 100%);
+            background-image: linear-gradient(to bottom right, #2d8988 0%, #5ba983 100%);
+        }
+
+        .gray-bg {
+            background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #bbbbbb), color-stop(1, #f2f2f2));
+            background-image: -webkit-linear-gradient(top left, #bbbbbb 0%, #f2f2f2 100%);
+            background-image: linear-gradient(to bottom right, #bbbbbb 0%, #f2f2f2 100%);
+        }
+
+        .shadow {
+            -webkit-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+            -moz-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+            -ms-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+            -o-box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+            box-shadow: 7px 14px 42px 3px rgba(163, 174, 184, 0.4);
+
+            margin: 2rem auto;
+        }
+
+        .overlay {
+            font-family: "Source Sans Pro", sans-serif;
+            width: 50%;
+            position: absolute;
+            top: 5%;
+            left: 25%;
+            z-index: 99999;
+            border-radius: 20px;
+            padding: 0 3rem 3rem 3rem;
+        }
+
+        .filters {
+            filter: brightness(350%) opacity(50%) grayscale(90%) blur(10px);
+        }
+    </style>
 </head>
-<body>
-<div id="game-area" tabindex="0">
+
+<body style="background: white;">
+<div class="overlay shadow eh-bg-color" id="overlay">
+    <div class="" style="color: white">
+        <h1 style="font-weight: 300; text-align: center; font-size: 5rem; margin-bottom: 0; margin-top: 20px;">
+            Sorry!</h1>
+        <h2 style="margin-top: 10px; padding-top: 0; font-size: 1.5rem; text-align: center;">
+            EntwicklerHeld.de gerade nicht erreichbar :-( <br/> Updates zu aktuellen Wartungsarbeiten an der Plattform
+            findest du auf Twitter unter <a href="https://twitter.com/EntwicklerHeld"> @EntwicklerHeld</a></h2>
+    </div>
+    <div style="width: 50%; margin: 1rem auto;" class="shadow">
+        <div style="width:100%;height:0;padding-bottom:56%;position:relative;">
+            <iframe src="https://giphy.com/embed/NTur7XlVDUdqM" width="100%" height="100%" style="position:absolute"
+                    frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+    </div>
+    <h2 style="margin-top: 20px; color: white; text-align: center;">Du brauchst trotzdem eine Herausforderung? Dann
+        miss dich hier! <br>
+        <button class="button-primary btn" id="play-button" onclick="startGame()">Los gehts!</button>
+    </h2>
+</div>
+<div style=" transition: filter 500ms linear;" class="filters" id="filters">
+    <div id="game-area" tabindex="0">
+    </div>
 </div>
 <script type="text/javascript" src="./js/snake.js"></script>
 <script type="text/javascript">
+    console.log("%cWow! This page reminds me of this: https://twitter.com/bluecoders/status/966624401172123649", "background: white; color: black; font-size: x-large");
+    function startGame() {
+        document.getElementById("overlay").remove();
+         document.getElementById("filters").classList.remove("filters");
+    }
     var mySnakeBoard = new SNAKE.Board({
         boardContainer: "game-area",
         fullScreen: true

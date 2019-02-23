@@ -57,6 +57,8 @@ a.snake-link:hover {
     color: #27ae60;
 }
 
+
+
 .snake-pause-screen {
     font-family: Verdana, arial, helvetica, sans-serif;
     font-size: 14px;
@@ -79,7 +81,7 @@ a.snake-link:hover {
     font-size: 14px;
     color: #ffffff;
     text-align: center;
-    background-color: #2c3e50;
+    background-color: #274939;
     padding: 8px;
     margin: 0;
 }
@@ -124,8 +126,9 @@ a.snake-link:hover {
     margin: 0;
     padding: 0;
     position: absolute;
-    background-color: #2c3e50;
-    border: 0 solid #2c3e50;
+        background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #1c5554), color-stop(1, #274939));
+    background-image: -webkit-linear-gradient(top left, #1c5554 0%, #274939 100%);
+    background-image: linear-gradient(to bottom right, #1c5554 0%, #274939 100%);
 }
 
 .snake-game-container {
@@ -134,7 +137,13 @@ a.snake-link:hover {
     border-width: 0;
     border-style: none;
     zoom: 1;
-    background-color: #34495e;
+
+
+    background-image: -webkit-gradient(linear, 0% 0%, 100% 100%, color-stop(0, #329998), color-stop(1, #6cc99c));
+    background-image: -webkit-linear-gradient(top left, #329998 0%, #6cc99c 100%);
+    background-image: linear-gradient(to bottom right, #329998 0%, #6cc99c 100%);
+
+
     position: relative;
 }
 
@@ -153,9 +162,9 @@ a.snake-link:hover {
     margin-left: -158px;
     text-align: center;
     display: block;
-    -webkit-border-radius: 91px;
-    -moz-border-radius: 91px;
-    border-radius: 91px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
 
 
 }
