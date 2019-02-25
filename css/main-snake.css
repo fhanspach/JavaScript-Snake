@@ -50,11 +50,11 @@ body {
 }
 
 a.snake-link, a.snake-link:link, a.snake-link:visited {
-    color: #27ae60;
+    color: #329999;
 }
 
 a.snake-link:hover {
-    color: #27ae60;
+    color: #329999;
 }
 
 
@@ -89,7 +89,7 @@ a.snake-link:hover {
 .snake-snakebody-block {
     margin: 0;
     padding: 0;
-    background-color: #27ae60;
+    background-color: #329999;
     position: absolute;
     border: 0 solid #000080;
     background-repeat: no-repeat;
@@ -174,12 +174,31 @@ a.snake-link:hover {
     cursor: pointer;
 }
 .snake-try-again-dialog >button, .snake-welcome-dialog >button  {
-    background-color: #27ae60;
-    color: whitesmoke;
+    background-color: #ff6b81;
     border:none;
     padding: 10px;
     font-size: 1.5rem;
-    margin: 1rem;
+    background-color: #ff6b81;
+    color: white;
+    transition: 0.5s;
+    border: 2px solid transparent !important;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin-top: 1em;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    touch-action: manipulation;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    font-family: 'Source Sans Pro', sans-serif;
 }
 
 .snake-try-again-dialog {
@@ -201,4 +220,6 @@ a.snake-link:hover {
     -moz-border-radius: 91px;
     border-radius: 91px;
     display: none;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 300;
 }

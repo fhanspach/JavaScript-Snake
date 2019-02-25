@@ -708,7 +708,7 @@ SNAKE.Board = SNAKE.Board || (function () {
                 }
 
 
-                welcomeTxt.innerHTML = "<h2>Snake</h2>Nutze die Pfeiltasten um die Schlange zu steuern und sammle Diamanten.</p>";
+                welcomeTxt.innerHTML = "<h2>Snake</h2>Nutze die Pfeiltasten, um die Schlange zu steuern und sammle Diamanten.</p>";
                 var welcomeStart = document.createElement("button");
                 welcomeStart.appendChild(document.createTextNode("Los geht's!"));
                 var loadGame = function () {
@@ -739,9 +739,9 @@ SNAKE.Board = SNAKE.Board || (function () {
                 tmpElm.className = "snake-try-again-dialog animated flipInX";
 
                 var tryAgainTxt = document.createElement("div");
-                tryAgainTxt.innerHTML = "JavaScript Snake";
+                tryAgainTxt.innerHTML = "Das war wohl nichts!";
                 var tryAgainStart = document.createElement("button");
-                tryAgainStart.appendChild(document.createTextNode("Play Again?"));
+                tryAgainStart.appendChild(document.createTextNode("Nochmal versuchen?"));
 
                 var reloadGame = function () {
                     tmpElm.style.display = "none";
@@ -792,7 +792,7 @@ SNAKE.Board = SNAKE.Board || (function () {
             me.resetBoard = function () {
                 SNAKE.removeEventListener(elmContainer, "keydown", myKeyListener, false);
                 mySnake.reset();
-                elmLengthPanel.innerHTML = "Length: 1";
+                elmLengthPanel.innerHTML = "Score: 1";
                 me.setupPlayingField();
             };
             /**
